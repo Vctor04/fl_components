@@ -10,9 +10,15 @@ class AppTheme {
           elevation: 0,
         ),
 
+        //Color del listTile
         listTileTheme: ListTileThemeData(
           iconColor: primary,
         ),
+
+        //Color del TextButton
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(primary: primary),
+        ) 
 
       );
 }
