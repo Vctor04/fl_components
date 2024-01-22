@@ -15,7 +15,14 @@ class AppRoutes {
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes(){
-    
+    Map<String, Widget Function(BuildContext)> appRoutes = {};
+
+    for (final option in MenuOptions) {
+      appRoutes.addAll({ option.route : ( BuildContext context ) => option.screen });
+    }
+
+    return appRoutes;
+
   }
   
   static Route<dynamic> onGenerateRoute( RouteSettings settings) {
