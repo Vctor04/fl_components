@@ -7,12 +7,19 @@ class AlertScreen extends StatelessWidget {
   void displayDialog(BuildContext context){
     //print('Hola mundo');
     showDialog(
-      barrierDismissible: true,
+      barrierDismissible: false,
       context: context, 
       builder: (context) {
         return AlertDialog(
           title: Text('Alerta'),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadiusDirectional.circular(20)),
           content: Text('Este es el contenido de mi alerta'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context), 
+              child: Text('Cancelar')
+            ),
+          ],
         );
       }
     );
